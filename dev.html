@@ -47,11 +47,27 @@
     </head>
     <body>
         <div class="container">
-            <h1>Parabens, voce implantou em Dev com sucesso!</h1>
+            <h1>Parabéns, você implantou em Dev com sucesso!</h1>
             <div class="nav">
-                <a href="/ip.txt">IP</a>
+                <a href="#" id="ipButton">IP</a>
             </div>
             <!-- Conteúdo adicional aqui -->
         </div>
+
+        <script>
+            function fetchIP() {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var ip = this.responseText;
+                        window.alert("IP: " + ip);
+                    }
+                };
+                xmlhttp.open("GET", "/ip.txt", true);
+                xmlhttp.send();
+            }
+            
+            document.getElementById("ipButton").addEventListener("click", fetchIP);
+        </script>
     </body>
 </html>
