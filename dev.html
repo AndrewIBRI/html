@@ -1,13 +1,23 @@
 <html>
 <head>
+<base href="/"/>
 <script>
-function readfile() {
-    alert(document.getElementById('iframe').contentDocument.body.firstChild.innerHTML);
+window.onload = function(){
+    var iframe = document.createElement('iframe');
+    iframe.id = 'iframe';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+    iframe.src = 'ip.txt';
+    setTimeout(function(){
+        var text = document.getElementById('iframe').contentDocument.body.firstChild.innerHTML;
+        alert(text);
+    }, 100);
 }
 </script>
+<head>
+    <title>Ambiente de desenvolvimento</title>
 </head>
 <body>
-<iframe id='iframe' src = 'ip.txt' onload='readfile()'> </iframe>
-<h1>Hello World!</h1>
+    <h1>Parabens vc implantou Dev na maquina com sucesso!</h1>
 </body>
 </html>
