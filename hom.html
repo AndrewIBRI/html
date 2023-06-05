@@ -1,9 +1,57 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Ambiente de homologaçao</title>
-</head>
-<body>
-    <h1>Parabens vc implantou em Homol com sucesso!</h1>
-    <a href='/ip.txt'>IP</a>
-</body>
+    <head>
+        <title>Ambiente de Produçao</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+            
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            
+            .nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+            
+            .nav a {
+                display: inline-block;
+                width: 200px;
+                padding: 10px 20px;
+                background: linear-gradient(to bottom, #4caf50, #45a049);
+                color: #ffffff;
+                text-decoration: none;
+                border-radius: 20px;
+                margin-bottom: 10px;
+                text-align: center;
+                transition: background-color 0.3s ease;
+            }
+            
+            .nav a:hover {
+                background: linear-gradient(to bottom, #3498db, #2980b9);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Parabens, voce implantou em Homol com sucesso!</h1>
+            <div class="nav">
+                <a href="/ip.txt">IP</a>
+            </div>
+            <!-- Conteúdo adicional aqui -->
+        </div>
+    </body>
 </html>
