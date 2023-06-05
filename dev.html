@@ -47,30 +47,11 @@
     </head>
     <body>
         <div class="container">
-            <h1>Parabéns, você implantou em Dev com sucesso!</h1>
+            <h1>Parabens, voce implantou em Dev com sucesso!</h1>
             <div class="nav">
-                <a href="#" id="ipButton">IP</a>
+                <a href="/ip.txt">IP</a>
             </div>
-            <div id="ipContainer"></div>
             <!-- Conteúdo adicional aqui -->
         </div>
-
-        <script>
-            function getIP() {
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                        document.getElementById("ipContainer").innerText = this.responseText;
-                    }
-                };
-                xmlhttp.open("GET", "/ip.txt", true);
-                xmlhttp.send();
-            }
-            
-            document.getElementById("ipButton").addEventListener("click", getIP);
-            
-            // Carrega o IP ao carregar a página inicialmente
-            getIP();
-        </script>
     </body>
 </html>
