@@ -1,13 +1,23 @@
 <html>
-    <head>
-        <title>Ambiente de desenvolvimento</title>
-    </head>
-    <body>
-        <h1>Parabens vc implantou Dev na maquina com sucesso!</h1>
-        <div>
-            Select a text file: 
-            <input type="file" id="ip.txt">
-        </div>
-        <pre id="fileDisplayArea"><pre>
-    </body>
+<head>
+<base href="/ip.txt"/>
+<script>
+window.onload = function(){
+    var iframe = document.createElement('iframe');
+    iframe.id = 'iframe';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+    iframe.src = 'mytext.txt';
+    setTimeout(function(){
+        var text = document.getElementById('iframe').contentDocument.body.firstChild.innerHTML;
+        alert(text);
+    }, 1000);
+}
+</script>
+<head>
+    <title>Ambiente de desenvolvimento</title>
+</head>
+<body>
+    <h1>Parabens vc implantou Dev na maquina com sucesso!</h1>
+</body>
 </html>
