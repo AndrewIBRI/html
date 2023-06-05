@@ -1,20 +1,5 @@
 <html>
 <head>
-<base href="/"/>
-<script>
-window.onload = function(){
-    var iframe = document.createElement('iframe');
-    iframe.id = 'iframe';
-    iframe.style.display = 'none';
-    document.body.appendChild(iframe);
-    iframe.src = 'ip.txt';
-    setTimeout(function(){
-        var text = document.getElementById('iframe').contentDocument.body.firstChild.innerHTML;
-        alert(text);
-    }, 100);
-}
-</script>
-<head>
     <title>Ambiente de desenvolvimento</title>
 </head>
 <body>
