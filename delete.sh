@@ -1,2 +1,2 @@
 #!/bin/bash
-rm var/www/html/cron.log
+rm /var/www/html/cron.log
