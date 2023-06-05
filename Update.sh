@@ -1,6 +1,6 @@
 #!/bin/bash
 while true
 do
-$(git pull)
+git pull
 sleep 1
 done
