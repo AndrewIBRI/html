@@ -51,23 +51,26 @@
             <div class="nav">
                 <a href="#" id="ipButton">IP</a>
             </div>
+            <div id="ipContainer"></div>
             <!-- Conteúdo adicional aqui -->
         </div>
 
         <script>
-            function fetchIP() {
+            function getIP() {
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
-                        var ip = this.responseText;
-                        window.alert("IP: " + ip);
+                        document.getElementById("ipContainer").innerText = this.responseText;
                     }
                 };
                 xmlhttp.open("GET", "/ip.txt", true);
                 xmlhttp.send();
             }
             
-            document.getElementById("ipButton").addEventListener("click", fetchIP);
+            document.getElementById("ipButton").addEventListener("click", getIP);
+            
+            // Carrega o IP ao carregar a página inicialmente
+            getIP();
         </script>
     </body>
 </html>
