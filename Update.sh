@@ -1,2 +1,6 @@
 #!/bin/bash
-git pull
+while true
+do
+$(git pull)
+sleep 1
+done
